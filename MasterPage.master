@@ -1,0 +1,166 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+    <div class="main">
+        <div class="container">
+            <div class="header">
+                <h1>My Site</h1>
+            </div>
+            <div class="navbar">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Product</a>
+                <a href="#">Contect</a>
+
+            </div>
+            <div class="content">
+              
+                <asp:Panel ID="panellogin" Visible="true" runat="server">
+                      <div class="left">
+                    <div class="login">
+                        <div class="login-heder">
+                            <h3>Login Here</h3>
+                        </div>
+                        <div class="login-content">
+
+                            <table border="1"  cellspacing="0" align="center">
+                                <tr>
+
+
+                                    <td style="height: 26px; width: 72px; margin-right: 5px; text-align: center;">Email
+                                    </td>
+
+
+                                    <td>
+                                        <asp:TextBox ID="homeem" runat="server"></asp:TextBox></td>
+                                </tr>
+                                <tr>
+
+
+                                    <td style="height: 26px; width: 72px; margin-right: 5px; text-align: center;">
+                                        Pasword</td>
+
+
+                                    <td>
+                                        <asp:TextBox ID="homeps" runat="server"></asp:TextBox></td>
+                                </tr>
+                                <tr>
+
+
+                                    <td style="height: 26px; width: 72px; margin-right: 5px; text-align: center; "></td>
+                                       <td style ="align-items: center; justify-content: center; text-align: center;">
+                                           <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="homesum_Click" /></td>
+                                </tr>
+                                <tr>
+
+
+                                    <td style="height: 26px; width: 72px; margin-right: 5px; text-align: center;"></td>
+
+                                    <td></td>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2" style="height: 26px; text-align: center;">
+                                        <a href="reg.aspx">new user?sign up</a>
+
+
+                                    </td>
+
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2" style="height: 26px; text-align: center;">
+                                        <a href="forgot.aspx">forgot pasword</a>
+
+
+                                    </td>
+                                     
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                </asp:Panel>
+                <asp:Panel ID="panelwelcome" Visible="false" runat="server">
+                    <div class="left">
+                    <div class="login">
+                        <div class="login-heder">
+                            <h3>WELCOME</h3>
+                        </div>
+                        <div class="login-content">
+
+                            <table border="1"  cellspacing="0" align="center">
+                                <tr>
+                                    <td colspan="2" style="height: 26px; width:400px; text-align: center;">
+                                        <asp:Image ID="Image1" Height="100" Width="100px" runat="server"/>
+                                    </td>
+
+                                </tr>
+                                       <tr>
+
+
+                                    <td style="height: 26px; width: 72px; margin-right: 5px; text-align: center;">Name
+                                    </td>
+
+
+                                    <td>
+                                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> </td>
+                                </tr>
+                                  <tr>
+
+
+                                    <td colspan="2" style="height: 26px; width:400px; text-align: center;">
+                                         <a href="edit.aspx">edit</a>"
+                                    </td>
+
+
+                                </tr>
+                                 <tr>
+
+                                    <td colspan="2" style="height: 26px; text-align: center;">
+                                        <a href="changepas.aspx">change pasword</a>
+
+
+                                    </td>
+
+                                </tr>
+                                  <tr>
+
+
+                                    <td colspan="2" style="height: 26px; width:400px; text-align: center;">
+                                        <asp:Button Text="LogOut" ID="btnlogOut" OnClick="btnlogOut_Click1" runat="server" />
+                                          &nbsp;</td>
+
+
+                                </tr>
+                            </table>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </asp:Panel>
+
+                <div class="right">
+                    <asp:ContentPlaceHolder ID="ContentPage" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                </div>
+    </div>
+        </div>
+
+        
+    </form>
+
+    <asp:ContentPlaceHolder ID="ContentJavaScript" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>
